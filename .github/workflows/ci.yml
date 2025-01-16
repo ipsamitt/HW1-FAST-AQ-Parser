@@ -11,7 +11,7 @@ jobs:
       
       - name: Install package
         run: |
-          pip install .
+          pip install pyproject.toml
 
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
