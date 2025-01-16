@@ -6,17 +6,19 @@ ALLOWED_NUC = TRANSCRIPTION_MAPPING.keys()
 
 
 def transcribe(seq: str, reverse: bool = False) -> str:
-    """
-    Write a function that will transcribe (replace DNA sequence to RNA
-    by replacing all 'T' to 'U') in an input sequence
-    """
-    pass
+    print(seq)
+    trans_seq = ""
+    if seq == "":
+        return ""
+    for char in seq:
+        trans_seq = trans_seq + (TRANSCRIPTION_MAPPING[char])
+    return trans_seq
 
 def reverse_transcribe(seq: str) -> str:
     """
     Write a function that will transcribe an input sequence and reverse
     the sequence
     """
-    # Hey this is my comment
-    # Again!
-    pass
+    trans_seq = transcribe(seq)
+    rev_trans_seq = trans_seq[::-1]
+    return rev_trans_seq

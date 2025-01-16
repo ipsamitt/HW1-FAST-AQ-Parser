@@ -24,6 +24,8 @@ def test_freebie_parser_2():
 
         
 def test_FastaParser():
+    fasta_parse_test = FastaParser("./blank.fa")
+  #  assert fasta_parse_test.get_record(f_obj=)
     """
     Write your unit test for your FastaParser class here. You should generate
     an instance of your FastaParser class and assert that it properly reads in

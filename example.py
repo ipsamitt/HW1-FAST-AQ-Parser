@@ -8,6 +8,22 @@ def main():
     """
     The main function
     """
+    fastq_file = "data/test.fq"
+    parser_obj_fastq = FastqParser(fastq_file)
+    for record in parser_obj_fastq:
+        print(transcribe(record))
+
+    fasta_file = "data/test.fa"
+    parser_obj_fasta = FastaParser(fasta_file)
+    for record in parser_obj_fasta:
+        print(transcribe(record))   
+
+    for record in parser_obj_fastq:
+        print(reverse_transcribe(record))
+    for record in parser_obj_fasta:
+        print(reverse_transcribe(record))
+
+     
     # Create instance of FastaParser
     # Create instance of FastqParser
         
